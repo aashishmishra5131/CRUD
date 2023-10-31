@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
+import {useNavigate} from 'react-router-dom';
 const Register = () => {
+  const navigate=useNavigate();
     const [formData, setFormData] = useState({
         FirstName: '',
         LastName: '',
@@ -20,6 +21,7 @@ const Register = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+        navigate('./');
       };
 
   return (

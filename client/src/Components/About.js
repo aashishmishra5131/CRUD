@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import countries from '../utils/country';
 
 const About = () => {
+  const navigate=useNavigate();
   const [Error, setError] = useState(false);
-
+ 
 
   const [formData, setFormData] = useState({
     Country: '',
@@ -43,7 +45,9 @@ const About = () => {
       return;
     }
    console.log(formData);
+   navigate('./');
   };
+
 
   return (
     <div className="container">
